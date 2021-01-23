@@ -297,11 +297,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1040944412}
+  - component: {fileID: 1040944416}
   - component: {fileID: 1040944411}
   - component: {fileID: 1040944413}
   - component: {fileID: 1040944414}
   - component: {fileID: 1040944415}
-  - component: {fileID: 1040944416}
   m_Layer: 0
   m_Name: Red Bird
   m_TagString: Untagged
@@ -478,6 +478,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4d04330ff9930844692b0aed3e8093a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  launchForce: 500
 --- !u!1 &1763410888
 GameObject:
   m_ObjectHideFlags: 0

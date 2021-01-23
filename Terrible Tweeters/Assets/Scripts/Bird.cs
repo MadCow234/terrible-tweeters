@@ -2,9 +2,12 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 public class Bird : MonoBehaviour
 {
+    [SerializeField] private float launchForce = 500f;
+    
     private Vector2 _startPosition;
     private Rigidbody2D _rigidbody2D;
     private SpriteRenderer _spriteRenderer;
@@ -39,7 +42,7 @@ public class Bird : MonoBehaviour
         
         // Add the bird back to physics control so it can be launched
         _rigidbody2D.isKinematic = false;
-        _rigidbody2D.AddForce(direction * 500);
+        _rigidbody2D.AddForce(direction * launchForce);
         
         _spriteRenderer.color = Color.white;
     }
