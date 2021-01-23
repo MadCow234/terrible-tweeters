@@ -14,7 +14,7 @@ public class Monster : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision2D)
     {
         if (ShouldDieFromCollision(collision2D))
-            Die();
+            StartCoroutine(Die());
             
     }
 
@@ -34,11 +34,14 @@ public class Monster : MonoBehaviour
         return false;
     }
 
-    private void Die()
+    private IEnumerator Die()
     {
         _hasDied = true;
         GetComponent<SpriteRenderer>().sprite = deadSprite;
         particles.Play();
-        // gameObject.SetActive(false);
+
+        yield return new WaitForSeconds(1);
+        
+        gameObject.SetActive(false);
     }
 }

@@ -498,7 +498,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   deadSprite: {fileID: 21300000, guid: 70a60dad9c6f2aa42941b53edf1428e9, type: 3}
-  particles: {fileID: 0}
+  particles: {fileID: 1839414633}
 --- !u!1 &405096403
 GameObject:
   m_ObjectHideFlags: 0
@@ -1986,7 +1986,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   deadSprite: {fileID: 21300000, guid: 70a60dad9c6f2aa42941b53edf1428e9, type: 3}
-  particles: {fileID: 0}
+  particles: {fileID: 1640071829}
 --- !u!60 &1416892562
 PolygonCollider2D:
   m_ObjectHideFlags: 0
