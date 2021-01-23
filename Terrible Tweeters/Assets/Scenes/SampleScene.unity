@@ -918,7 +918,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!60 &1040944414
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -1002,7 +1002,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4d04330ff9930844692b0aed3e8093a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  launchForce: 700
+  launchForce: 1000
 --- !u!1 &1404819861
 GameObject:
   m_ObjectHideFlags: 0

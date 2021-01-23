@@ -51,13 +51,21 @@ public class Bird : MonoBehaviour
     {
         // Sync the bird position to the mouse position
         var mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        var transform1 = transform;
-        transform1.position = new Vector3(mousePosition.x, mousePosition.y, transform1.position.z);
+        var birdTransform = transform;
+        birdTransform.position = new Vector3(mousePosition.x, mousePosition.y, birdTransform.position.z);
     }
 
     // Update is called once per frame
     private void Update()
     {
         
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision2D)
+    {
+        // Reset the bird
+        _rigidbody2D.position = _startPosition;
+        _rigidbody2D.isKinematic = true;
+        _rigidbody2D.velocity = Vector2.zero;
     }
 }
