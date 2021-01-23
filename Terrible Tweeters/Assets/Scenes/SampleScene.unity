@@ -367,7 +367,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   deadSprite: {fileID: 21300000, guid: 70a60dad9c6f2aa42941b53edf1428e9, type: 3}
-  particleSystem: {fileID: 1839414633}
+  particles: {fileID: 1839414633}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
