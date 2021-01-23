@@ -7,6 +7,7 @@ using UnityEngine.Serialization;
 public class Bird : MonoBehaviour
 {
     [SerializeField] private float launchForce = 500f;
+    [SerializeField] private float maxDragDistance = 3.5f;
     
     private Vector2 _startPosition;
     private Rigidbody2D _rigidbody2D;
@@ -51,8 +52,20 @@ public class Bird : MonoBehaviour
     {
         // Sync the bird position to the mouse position
         var mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        var birdTransform = transform;
-        birdTransform.position = new Vector3(mousePosition.x, mousePosition.y, birdTransform.position.z);
+        Vector2 desiredPosition = mousePosition;
+
+        float distance = Vector2.Distance(desiredPosition, _startPosition);
+        if (distance > maxDragDistance)
+        {
+            Vector2 direction = desiredPosition - _startPosition;
+            direction.Normalize();
+            desiredPosition = _startPosition + (direction * maxDragDistance);
+        }
+        
+        if (desiredPosition.x > _startPosition.x)
+            desiredPosition.x = _startPosition.x;
+        
+        _rigidbody2D.position = desiredPosition;
     }
 
     // Update is called once per frame
